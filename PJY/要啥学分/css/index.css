@@ -1,0 +1,131 @@
+/*顶部区域*/
+#nav{
+	height: 60px;
+	width: 100%;
+	background-color: rgba(0,0,0,0.7);
+	position: fixed;
+	display: none;
+}
+.top-right{
+	float: right;
+	display: inline-block;
+	position: relative;
+	right: 50px;
+}
+.top-right a{
+	font-size: 18px;
+	font-family: "微软雅黑";
+	color: #f5f5f5;
+	line-height: 60px;
+}
+.top-left a:first-child{
+	position: absolute;
+	top: 5px;
+	left: 100px;
+	line-height: 50px;
+	color: #f5f5f5;
+	font-size: 18px;
+	font-family: "微软雅黑";
+}
+#logo{
+	position: absolute;
+	top: 10px;
+	left: 50px;
+	height: 40px;
+	width: 40px;
+}
+/*内容区域*/
+#content{
+	height: 300%;
+	width: 100%;
+	background-color: #f5f5f5;
+}
+#content img{
+	width: 100%;
+}
+#aboutUs{
+	height: 500px;
+	background-color: red;
+}
+#latestNews{
+	background-color: #f5f5f5;
+}
+.newsContainer{
+	background-color: blue;
+}
+.newsAside{
+	width: 25%;
+	border: 2px solid black;
+	display: inline;
+	margin-left: 5%;
+	margin-bottom: 10%;
+	overflow: hidden;
+}
+.newsAside img{
+	width: 25%;
+	height: 20%;
+	overflow: hidden;
+}
+.newsRight .news{
+	width: 20%;
+	border: 2px solid black;
+	display: inline-block;
+	margin-right: 5%;
+	margin-top: 2.5%;
+}
+.news img{
+	width: 30%;
+}
+.news:nth-child(1){
+	position: relative;
+	left: 40%;
+}
+.news:nth-child(2){
+	position: relative;
+	left: 40%;
+}
+.news:nth-child(4){
+	position: relative;
+	left: 40%;
+}
+.news:nth-child(5){
+	position: relative;
+	left: 40%;
+}
+
+/*底部区域*/
+#footer{
+	height: 50%;
+	width: 100%;
+	text-align: center;
+	background-color: black;
+}
+.QRCode{
+	height: 50%;
+	display: inline-block;
+	margin: 0 auto;
+	text-align: center;
+}
+.QRCode img{
+	width: 100px;
+	margin: 10% auto;
+}
+.textjoin{
+	text-align: center;
+	font: bold 32px "Arial";
+	margin-bottom: 20px;
+}
+.copyright{
+	text-align: center;
+	margin-bottom: 20px;
+}
+.blocka{
+	height: 20px;
+	width: 100%;
+	background-color: #f5f5f5;
+}
+.blockb{
+	height: 20px;
+	width: 100%;
+	background-color: black;
+}
