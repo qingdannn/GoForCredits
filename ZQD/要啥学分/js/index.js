@@ -26,7 +26,7 @@ function scrollShow(){
 }
 scrollShow();
 function scrollWindow() {
-	window.scrollTo(100,500);
+	window.scrollTo(0,0);
 }*/
 
 
@@ -50,31 +50,36 @@ function reSize(obj)//加载背景图时以当前页面高度为高度
 	obj.height=innerHeight;
 }
 
-var last_known_scroll_position = 0;
-var ticking = false;
+// var last_known_scroll_position = 0;
+// var ticking = false;
 
-function doSomething(scroll_pos) {
-  var el=document.getElementById('nav');
-  el.style.display="block";
-}
+// function doSomething(scroll_pos) {
+//   var el=document.getElementById('nav');
+//   el.style.display="block";
+// }
 
-window.addEventListener('scroll', function(e) {
+// window.addEventListener('scroll', function(e) {
 
-  last_known_scroll_position = window.scrollY;
+//   last_known_scroll_position = window.scrollY;
 
-  if (!ticking) {
+//   if (!ticking) {
 
-    window.requestAnimationFrame(function() {
-      doSomething(last_known_scroll_position);
-      ticking = false;
-    });
+//     window.requestAnimationFrame(function() {
+//       doSomething(last_known_scroll_position);
+//       ticking = false;
+//     });
      
-    ticking = true;
+//     ticking = true;
 
-  }
+//   }
   
-});
-
+// });
+// function scrollToTop(obj){
+//   var 
+// }
 function scrollWindow(){
-	window.scrollBy(0,innerHeight);
+	window.scrollBy(innerWidth,innerHeight);
 }
+// function dingwei(obj) {
+//   obj.style.
+// }

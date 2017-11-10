@@ -1,4 +1,5 @@
 /*顶部区域*/
+
 #nav{
 	height: 60px;
 	width: 100%;
@@ -34,6 +35,14 @@
 	height: 40px;
 	width: 40px;
 }
+#scrollTop img{
+	position: absolute;
+	top: 500px;
+	left: 500px;
+	cursor: pointer;
+	width: 50px;
+	z-index: 2;
+}
 /*内容区域*/
 #content{
 	height: 300%;
@@ -42,15 +51,21 @@
 }
 #content img{
 	width: 100%;
+	z-index: -1;
 }
+/*社团介绍*/
 #aboutUs{
 	background-color: red;
 }
+#aboutUs div{
+	display: inline-block;
+}
+/*最新动态*/
 #latestNews{
 	background-color: #f5f5f5;
 }
 .newsContainer{
-	background-color: blue;
+	background-color: white;
 	margin-left: 5%;
 	margin-right: 5%;
 }
@@ -66,18 +81,32 @@
 }
 .newsRight{
 	width: 55%;
-	margin-top: 5%;
+	margin-top: 8%;
 	margin-right: 3%;
 }
 .newsRight tr td{
 	padding: 2%;
 }
-.newsRight div{
-	display: inline-block;
-	border: 1px solid black;
-}
 .newsRight .news{
+	display: inline-block;
+	border: 1px dotted black;
+	background-color: #f5f5f5;
+}
+/*.newsRight .news{
 	margin-bottom: 15%;
+}*/
+.news a{
+	height: 30px;
+	line-height: 30px;
+	
+}
+.news a:link{
+	color: #f5f5f5;
+	font: bold 18px;
+}
+.news p{
+	text-align: right;
+	font-size: 14px;
 }
 /*.news:nth-child(1){
 	position: relative;
