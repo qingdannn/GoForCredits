@@ -35,13 +35,18 @@
 	height: 40px;
 	width: 40px;
 }
-#scrollTop img{
-	position: absolute;
-	top: 500px;
-	left: 500px;
+#scrollTop{
+	display: inline-block;
+	background:url("F:/乱七八糟/GoForCredits/ZQD/要啥学分/images/scrollTop.png") no-repeat;
+	width:100px;
+	height:80px;
+	right:4px;
+	bottom:5px;	
+	position: fixed;
+	_position: absolute;
 	cursor: pointer;
-	width: 50px;
-	z-index: 2;
+	display: none;
+
 }
 /*内容区域*/
 #content{
@@ -49,7 +54,7 @@
 	width: 100%;
 	background-color: #f5f5f5;
 }
-#content img{
+.bgImg{
 	width: 100%;
 	z-index: -1;
 }
@@ -63,16 +68,19 @@
 /*最新动态*/
 #latestNews{
 	background-color: #f5f5f5;
+	display: inline-block;
 }
 .newsContainer{
-	background-color: white;
-	margin-left: 5%;
-	margin-right: 5%;
+	background-color: #f5f5f5;
+	margin: 5%;
+}
+.newsContainer img{
+	width: 100%;
 }
 .newsAside{
 	width: 35%;
-	margin-left: 4%;
-	margin-bottom: 10%;
+	/*margin-left: 4%;
+	margin-bottom: 10%;*/
 	display: inline-block;
 	border: 2px solid black;
 }
@@ -80,14 +88,16 @@
 	overflow: hidden;
 }
 .newsRight{
-	width: 55%;
-	margin-top: 8%;
-	margin-right: 3%;
+	width: 60%;
+	margin-top: 2%;
+	/*margin-right: 3%;*/
 }
 .newsRight tr td{
+	width: 30%;
 	padding: 2%;
 }
 .newsRight .news{
+	cursor: pointer;
 	display: inline-block;
 	border: 1px dotted black;
 	background-color: #f5f5f5;
@@ -101,8 +111,12 @@
 	
 }
 .news a:link{
-	color: #f5f5f5;
+	color: black;
 	font: bold 18px;
+}
+.news a:visited{
+	color: grey;
+	font-size: 18px;
 }
 .news p{
 	text-align: right;

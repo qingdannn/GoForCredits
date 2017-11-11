@@ -13,26 +13,24 @@
 </head>
 <body>
 	<!--顶部区域-->
-
+<div id="main">
 	<div id="nav">
-		<div class="top">
-			<div class="top-left">
-				<a href="#">南京邮电大学天文协会</a>
-				<a href="#"><img src="images/logo.png" id="logo"></a>
-			</div>
-			<div class="top-right">
-				<ul class="top-nav">
-					<a href="#">首页</a>&nbsp;&nbsp;
-					<a href="#">最新动态</a>&nbsp;&nbsp;
-					<a href="#">关于我们</a>&nbsp;&nbsp;
-					<a href="#">部门介绍</a>
-				</ul>
-			</div>
+		<div class="top-left">
+			<a href="#">南京邮电大学天文协会</a>
+			<a href="#"><img src="images/logo.png" id="logo"></a>
+		</div>
+		<div class="top-right">
+			<ul class="top-nav">
+				<a href="#">首页</a>&nbsp;&nbsp;
+				<a href="#">最新动态</a>&nbsp;&nbsp;
+				<a href="#">关于我们</a>&nbsp;&nbsp;
+				<a href="#">部门介绍</a>
+			</ul>
 		</div>	
 	</div>
 
 	<div id="scrollTop">
-		<img src="images/scrollTop.png" alt="scrollTop" onclick="scrollWindow()">
+		<!--<img src="images/scrollTop.png" alt="scrollTop" id="scrollTop">-->
 	</div>
 
 	<!--内容区域-->
@@ -42,10 +40,10 @@
 		<div class="block"></div>
 
 		<section id="background">
-			<img src="images/1.jpg" id="bgImg" onload="reSize(this)">
+			<img src="images/1.jpg" id="bgImg" onload="reSize(this)" onresize="reSize(this)">
 		</section>
 
-		<section id="aboutUs">
+		<section id="aboutUs" onload="reSize(this)" onresize="reSize(this)">
 			<div>
 				南京邮电大学天文协会为南邮校科协直属的校级兴趣社团。南邮天协自2015年成立，为南邮最年轻的社团之一，南邮天文协会是南邮所有爱好头顶上灿烂星空的同学的共同家园。天协的日常活动有  观星、学术授课等，以达到普及天文知识的目的。当重大天象事件发生时，组织观测活动。南邮天协现有天鹰80/100折射式望远镜、双筒望 远镜等设备。希望每一个热爱星空的你，能仰望星空，脚踏实地，我们在南邮天协等你。
 			</div>
@@ -67,9 +65,9 @@
 			</div>
 		</section>
 
-		<section id="latestNews">
+		<section id="latestNews" onload="reSize(this)">
 
-			<div class="blocka"></div>
+			<!--<div class="blocka"></div>-->
 
 			<div class="newsContainer">
 
@@ -80,17 +78,22 @@
 				<table class="newsRight" align="right">
 					<tr>
 						<td>
-							<div class="newOne news">
+							<div class="newOne news" onclick="window.open("https://mp.weixin.qq.com/s?__biz=MzI3OTUxNDA1Mw==&mid=2247483781&idx=1&sn=1a4cbc9482e504c5c2b7204ca1472bae&chksm=eb47df2fdc305639e13b5c0faa958850aaf8dd1441c77470337291e1850485154ebd2d74605d#rd",false)">
 								<img src="images/pic01.jpg" class="newsImg">
-								<a href="https://mp.weixin.qq.com/s?__biz=MzI3OTUxNDA1Mw==&mid=2247483781&idx=1&sn=1a4cbc9482e504c5c2b7204ca1472bae&chksm=eb47df2fdc305639e13b5c0faa958850aaf8dd1441c77470337291e1850485154ebd2d74605d#rd">最后一次全会暨2017届中干换届竞选</a>
-								<p>2017-06-14</p>
+								<div class="newsTitile">
+									<a href="https://mp.weixin.qq.com/s?__biz=MzI3OTUxNDA1Mw==&mid=2247483781&idx=1&sn=1a4cbc9482e504c5c2b7204ca1472bae&chksm=eb47df2fdc305639e13b5c0faa958850aaf8dd1441c77470337291e1850485154ebd2d74605d#rd">最后一次全会暨2017届中干换届竞选</a>
+									<p>2017-06-14</p>
+								</div>
+								
 							</div>
 						</td>
 						<td>
 							<div class="newTwo news">
 								<img src="images/pic02.jpg" class="news">
-								<a href="https://mp.weixin.qq.com/s?__biz=MzI3OTUxNDA1Mw==&mid=2247483781&idx=2&sn=883f79f1747e1c37661be44137335ddc&chksm=eb47df2fdc3056394949215d2cc921eb384f521beb74292a683eadabfda595cc4787d72fcb84#rd" target="_blank">首次出征——天文知识竞赛</a>
-								<p>2017-06-14</p>
+								<div class="newsTitile">
+									<a href="https://mp.weixin.qq.com/s?__biz=MzI3OTUxNDA1Mw==&mid=2247483781&idx=2&sn=883f79f1747e1c37661be44137335ddc&chksm=eb47df2fdc3056394949215d2cc921eb384f521beb74292a683eadabfda595cc4787d72fcb84#rd" target="_blank">首次出征——天文知识竞赛</a>
+									<p>2017-06-14</p>
+								</div>
 							</div>
 						</td>
 					</tr>
@@ -98,15 +101,19 @@
 						<td>
 							<div class="newThree news">
 								<img src="images/pic03.jpg" class="newsImg">
-								<a href="https://mp.weixin.qq.com/s?__biz=MzI3OTUxNDA1Mw==&mid=2247483753&idx=1&sn=40a82e732b0c0bdba7e2230b20e9bf7f&chksm=eb47dfc3dc3056d5157046c5991c0f5d8ae700e9a2cedda20aac0c7923f9d1e24a76131bfab7#rd">盱眙观测大记事</a>
-								<p>2017-04-05</p>
+								<div class="newsTitile">
+									<a href="https://mp.weixin.qq.com/s?__biz=MzI3OTUxNDA1Mw==&mid=2247483753&idx=1&sn=40a82e732b0c0bdba7e2230b20e9bf7f&chksm=eb47dfc3dc3056d5157046c5991c0f5d8ae700e9a2cedda20aac0c7923f9d1e24a76131bfab7#rd">盱眙观测大记事</a>
+									<p>2017-04-05</p>
+								</div>
 							</div>
 						</td>
 						<td>
 							<div class="newFour news">
-								<img src="images/pic04.jpg" class="newsImg">
-								<a href="https://mp.weixin.qq.com/s?__biz=MzI3OTUxNDA1Mw==&mid=2247483735&idx=1&sn=6d246a18a99923af4784dcc117967f48&chksm=eb47dffddc3056ebd2fa8155ddc9ddc93f3236b82c217230ef9318fd43b3340755b66d6fe292#rd">地球一小时|南邮天文协会分会场</a>
-								<p>2017-03-22</p>
+								<img src="images/news04.jpg" class="newsImg">
+								<div class="newsTitile">
+									<a href="https://mp.weixin.qq.com/s?__biz=MzI3OTUxNDA1Mw==&mid=2247483735&idx=1&sn=6d246a18a99923af4784dcc117967f48&chksm=eb47dffddc3056ebd2fa8155ddc9ddc93f3236b82c217230ef9318fd43b3340755b66d6fe292#rd">地球一小时|南邮天文协会分会场</a>
+									<p>2017-03-22</p>
+								</div>
 							</div>
 						</td>
 					</tr>
@@ -114,7 +121,7 @@
 
 			</div>
 
-			<div class="blocka"></div>
+			<!--<div class="blocka"></div>-->
 
 		</section>
 
@@ -150,6 +157,6 @@
 		</div>
 
 	</div>
-
+</div>
 </body>
 </html>
