@@ -13,7 +13,7 @@ window.addEventListener('scroll', function(e) {
   last_known_scroll_position = window.pageYOffset;
   if (!ticking) {
     window.requestAnimationFrame(function() {
-      if(last_known_scroll_position==200)
+      if(true)
       {
       doSomething(last_known_scroll_position);
       ticking = false;
