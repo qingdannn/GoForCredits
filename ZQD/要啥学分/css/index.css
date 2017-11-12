@@ -1,24 +1,27 @@
 /*顶部区域*/
-
 #nav{
 	height: 60px;
 	width: 100%;
 	background-color: rgba(0,0,0,0.7);
 	position: fixed;
 	display: none;
+	z-index: 1;
+}
+.top-left{
+	width: 40%;
+	display: inline-block;
 }
 .top-right{
 	float: right;
-	display: inline-block;
-	position: relative;
-	right: 50px;
+ 	display: inline-block;
+	margin-right: 5%;
 }
-.top-right a{
+/* .top-right a{
 	font-size: 18px;
 	font-family: "微软雅黑";
 	color: #f5f5f5;
 	line-height: 60px;
-}
+} */
 .top-left a:first-child{
 	position: absolute;
 	top: 5px;
@@ -36,6 +39,7 @@
 	width: 40px;
 }
 #scrollTop{
+	z-index: 1;
 	display: inline-block;
 	background:url("F:/乱七八糟/GoForCredits/ZQD/要啥学分/images/scrollTop.png") no-repeat;
 	width:100px;
@@ -46,8 +50,8 @@
 	_position: absolute;
 	cursor: pointer;
 	display: none;
-
 }
+
 /*内容区域*/
 #content{
 	height: 300%;
@@ -58,6 +62,61 @@
 	width: 100%;
 	z-index: -1;
 }
+.scrollDown{
+	z-index: 1;
+	position: absolute;
+	top: 80%;
+	left: 45%;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	text-transform: uppercase; 
+}
+#scrollDown{
+	width: 50px;
+	height: 50px;
+	display: block;
+	-webkit-animation: pulse 2s infinite;
+			animation: pulse 2s infinite;
+}
+    
+@-webkit-keyframes pulse 
+{
+	0% 
+	{
+		-webkit-transform: translate(0, 0);
+		transform: translate(0, 0); 
+	}
+	50% 
+	{
+		-webkit-transform: translate(0, 10px);
+		transform: translate(0, 10px); 
+	}
+	100% 
+	{
+		-webkit-transform: translate(0, 0);
+		transform: translate(0, 0); 
+	} 
+}
+
+@keyframes pulse 
+{
+	0%
+	{
+		-webkit-transform: translate(0, 0);
+		transform: translate(0, 0); 
+	}
+	50% 
+	{
+		-webkit-transform: translate(0, 10px);
+		transform: translate(0, 10px); 
+	}
+	100% 
+	{
+		-webkit-transform: translate(0, 0);
+		transform: translate(0, 0); 
+	} 
+}
 /*社团介绍*/
 #aboutUs{
 	background-color: red;
@@ -65,10 +124,58 @@
 #aboutUs div{
 	display: inline-block;
 }
+/*部门介绍*/
+#aboutBM{
+	width: 100%;
+	height: 70%;
+	overflow: hidden;
+}
+#aboutBM ul{
+	width: 100%;
+}
+#aboutBM ul li{
+	width: 25%;
+	float: left;
+}
+.BMImg{
+	position: relative;
+	overflow: hidden;
+}
+#aboutBM .BMImg>img{
+	transition : -webkit-transform 1s;
+  	transform: translateZ(0);
+  	margin: 0 auto;
+}
+#aboutBM .BMImg:hover > img{
+	transform: scale(1.5, 1.5);
+	transition : -webkit-transform 1s;
+}
+.BMText{
+	width: 100%;
+	background: white;
+	position: relative;
+	bottom: 0px;
+	transition: all 0.6s;
+	z-index: -1;
+}
+.BMText p{
+	font-size: 12px;
+	color: grey;
+	line-height: 1.5rem;
+	text-align: center;
+	margin: 5px;
+}
+#aboutBM .BMImg:hover + .BMText{
+	-webkit-transition:bottom 1s ease-out;
+	z-index: 0;
+	bottom:99.6px;
+}
 /*最新动态*/
 #latestNews{
 	background-color: #f5f5f5;
 	display: inline-block;
+	position: relative;
+	top: -99.6px;
 }
 .newsContainer{
 	background-color: #f5f5f5;

@@ -75,6 +75,7 @@ window.addEventListener('scroll', function(e)
 window.onload=function(){
   NavigationDisplay('nav');
   getScroll('scrollTop');
+  scrollWindow('scrollDown');
 }
 //外部链接在新页面打开 好像翻车了？？？
 function externalTarget() 
@@ -98,7 +99,7 @@ function NavigationDisplay(id)
   {
     obj.style.display='none';
     window.onscroll=function(){
-      getScrollTop()>0?obj.style.display="block":obj.style.display="none";
+      getScrollTop()>window.innerHeight?obj.style.display="block":obj.style.display="none";
     }
   }
 }

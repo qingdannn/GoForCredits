@@ -6,9 +6,9 @@
 	<!--CSS-->
 	<link rel="stylesheet" type="text/css" href="css/base.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/nav.css"></li>
 	<!--Javascript-->
 	<script type="text/javascript" src="js/index.js"></script>
-
 
 
 </head>
@@ -22,10 +22,30 @@
 		</div>
 		<div class="top-right">
 			<ul class="top-nav">
-				<a href="#">首页</a>&nbsp;&nbsp;
-				<a href="#">最新动态</a>&nbsp;&nbsp;
-				<a href="#">关于我们</a>&nbsp;&nbsp;
-				<a href="#">部门介绍</a>
+				<li>
+					<p>首页</p>
+				</li>
+				<li>
+					<p>最新动态</p>
+					<ul class="sub">
+						<li><a href="#">活动导览</a></li>
+						<li><a href="#">活动报道</a></li>
+					</ul>
+				</li>
+				<li>
+					<p>关于天协</p>
+					<ul class="sub">
+						<li><a href="#">Introduction</a></li>
+						<li><a href="#">Contact us</a></li>
+					</ul>
+				</li>
+				<li>
+					<p>加入我们</p>
+				</li>
+<!-- 				<a href="#">首页</a>&nbsp;&nbsp;
+<a href="#">最新动态</a>&nbsp;&nbsp;
+<a href="#">关于我们</a>&nbsp;&nbsp;
+<a href="#">部门介绍</a> -->
 			</ul>
 		</div>	
 	</div>
@@ -42,28 +62,66 @@
 
 		<section id="background">
 			<img src="images/1.jpg" id="bgImg" onload="reSize(this)" onresize="reSize(this)">
+			<div class="scrollDown">
+				<span>
+					<img src="images/scrollDown.png" alt="scrollDown" id="scrollDown" onclick="scrollWindow()">
+				</span>
+			</div>
 		</section>
 
 		<section id="aboutUs" onload="reSize(this)" onresize="reSize(this)">
 			<div>
 				南京邮电大学天文协会为南邮校科协直属的校级兴趣社团。南邮天协自2015年成立，为南邮最年轻的社团之一，南邮天文协会是南邮所有爱好头顶上灿烂星空的同学的共同家园。天协的日常活动有  观星、学术授课等，以达到普及天文知识的目的。当重大天象事件发生时，组织观测活动。南邮天协现有天鹰80/100折射式望远镜、双筒望 远镜等设备。希望每一个热爱星空的你，能仰望星空，脚踏实地，我们在南邮天协等你。
 			</div>
+		</section>
 
-			<div>
-				天文知识的讲堂，理论学习的圣地。探索宇宙星体形成之谜，了解恒星类型，走进恒星的一生。锁定当今天文学界动态，精彩、有趣的知识尽在学术组。
-			</div>
+		<section id="aboutBM" onload="reSize(this)">
+			<ul>
+				<li>
+					<a href="" class="BMlink">
+						<div class="BMImg">
+							<img src="images/unit01.jpg" class="BMImgOne">
+						</div>
+						<div class="BMText">
+							<br><p>天文知识的讲堂，理论学习的圣地。<br>探索宇宙星体形成之谜，了解恒星类型，走进恒星的一生</p><br>
+						</div>
+					</a>
+				</li>
 
-			<div>
-				脚踏实地，仰望星空。文能提笔算方位，武能架镜玩单反。观测组，带你观四季星空，游全天星座。还有太阳观测、行星观测等着你哦。
-			</div>
+				<li>
+					<a href="" class="BMlink">
+						<div class="BMImg">
+							<img src="images/unit02.jpg" class="BMImgTwo">
+						</div>
+						<div class="BMText"> 
+							<br><p>脚踏实地，仰望星空。文能提笔算方位，武能架镜玩单反<br>观测组，带你观四季星空，游全天星座。</p><br>
+						</div>
+					</a>
+					
+				</li>
 
-			<div>
-				想把小小的星愿传达给思念之人吗？想把璀璨星空呈现给整个南邮吗？ 在这里，有色彩在纸上的跃动，有新媒体与传统媒体的碰撞，当然也有你在天协宣传组的闪耀。
-			</div>
+				<li>
+					<a href="" class="BMlink">
+						<div class="BMImg">
+							<img src="images/unit03.jpg" class="BMImgThree">
+						</div>
+						<div class="BMText">
+							<br><p>把小小的星愿传达给思念之人,把璀璨星空呈现给整个南邮<br> 在这里，有色彩在纸上的跃动，有新媒体与传统媒体的碰撞</p><br>
+						</div>
+					</a>
+				</li>
 
-			<div>
-				联系南京各校天文协会，联络南京天文联合会。加入外联组，你将有更多机会认识南京天文界各路大神。天空这么大，我想去学校外看看！
-			</div>
+				<li>
+					<a href="" class="BMlink">
+						<div class="BMImg">
+							<img src="images/unit04.jpg" class="BMImgFour">
+						</div>
+						<div class="BMText">
+							<br><p>联系南京各校天文协会，联络南京天文联合会<br>天空这么大，我想去学校外看看！</p><br>
+						</div>
+					</a>
+				</li>
+			</ul>
 		</section>
 
 		<section id="latestNews" onload="reSize(this)">
