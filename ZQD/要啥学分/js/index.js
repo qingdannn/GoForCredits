@@ -75,7 +75,6 @@ window.addEventListener('scroll', function(e)
 window.onload=function(){
   NavigationDisplay('nav');
   getScroll('scrollTop');
-  scrollWindow('scrollDown');
 }
 //外部链接在新页面打开 好像翻车了？？？
 function externalTarget() 
