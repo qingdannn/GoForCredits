@@ -52,32 +52,55 @@ function reSize(obj)
   obj.width=window.innerWidth-19 || document.documentElement.clientWidth-19 || document.body.clientWidth-19;
 }
 //导航栏消失又出现
-/*
-var last_known_scroll_position = 0;
+
 var ticking = false;
 
-function doSomething(scroll_pos) {
+function NavigationDisplay() {
+
   var el=document.getElementById('nav');
+  el.setAttribute('class','aos-item aos-init col-md-6');
+  el.setAttribute('data-aos','slide-down');
   el.style.display="block";
+
 }
+
 
 window.addEventListener('scroll', function(e) 
 {
-  last_known_scroll_position = window.scrollY;
   if (!ticking) {
-    window.requestAnimationFrame(function() {
-      doSomething(last_known_scroll_position);
+    if(window.pageYOffset<window.innerHeight)
+    {
+      window.requestAnimationFrame(function() {
+      NavigationDisplay();
       ticking = false;
     });
+    } 
     ticking = true;
   }
 });
-*/
+
 //window.onload+=externalTarget;
 window.onload=function(){
-  NavigationDisplay('nav');
-  //getScroll('scrollTop');
+  //NavigationDisplay('nav');
+  getScroll('scrollTop');
 }
+
+/*
+function NavigationDisplay(id)
+{
+  var obj=document.getElementById(id);
+  var timer=null;
+  PositionFixed(obj);
+  if(obj)
+  {
+    obj.style.display='none';
+    window.onscroll=function(){
+      getScrollTop()>window.innerHeight?obj.style.display="block":obj.style.display="none";
+    }
+  }
+}*/
+
+
 //外部链接在新页面打开 好像翻车了？？？
 function externalTarget() 
 {
@@ -91,19 +114,6 @@ function externalTarget()
       anchor.target="_blank";
   }
 }
-function NavigationDisplay(id)
-{
-  var obj=document.getElementById(id);
-  var timer=null;
-  PositionFixed(obj);
-  if(obj)
-  {
-    obj.style.display='none';
-    window.onscroll=function(){
-      getScrollTop()>window.innerHeight?obj.style.display="block":obj.style.display="none";
-    }
-  }
-}
 // function scrollToTop(obj){
 //   var 
 // }
@@ -115,8 +125,13 @@ function NavigationDisplay(id)
 //下滑一页
 function scrollWindow()
 {
-	window.scrollBy(innerWidth,innerHeight);
+$(scrollDown).click(function(){
+    var t = $(window).scrollTop();
+    $('body,html').animate({'scrollTop':window.innerHeight},650)
+})
 }
+
+
 //回到顶部
 function getScroll(id)
 {
