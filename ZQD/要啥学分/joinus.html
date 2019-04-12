@@ -1,0 +1,196 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <title>加入我们</title>
+    <style type="text/css">
+    *{
+      margin:0;
+    }
+    .return{
+      width: 30px;
+      position: fixed;
+      top: 2%;
+      left: 3%;
+    }
+    #nav2{
+      font-family: Microsoft Yahei;
+      font-size: 25px;
+      line-height: 30px;
+      position:fixed;
+      z-index: 10;
+      color: white;
+      top: 2%;
+      left: 5%;
+    }
+    #nav2 a:link{
+      color: white;
+    }
+    #nav2 a:visited{
+    	text-decoration: none;
+    	color: white;
+    }
+    #bgImg2{
+      text-align: center;
+      width: 100%;
+      position: fixed;
+    }
+    #formbg{
+      position: absolute;
+      background-color: #F5F5F5;
+      width: 60%;
+      height: 80%;
+      z-index:10;
+      left: 20%;
+      right: 20%;
+      top: 10%;
+      opacity:0.9;
+    }
+    #welcome{
+      opacity: 100%;
+      position: relative;
+      width: 30%;
+      top: -10%;
+      left: 5%;
+      display: inline-block;
+      font-size: 35;
+      text-shadow:1px 1px 1px #000;
+      font-family:Apple Chancery;
+      src: url('Apple Chancery.ttf')；
+    }
+    #form{
+    	width: 60%;
+      font-family: Microsoft Yahei;
+      position: relative;
+      top: 10%;
+      left: 10%;
+      display: inline-block;
+    }
+
+    #background{
+      z-index: -20;
+      position: absolute;
+    }
+    #submit{
+      font-size: 25px;
+    }
+    #reset{
+      font-size: 25px;
+    }
+    </style>
+  </head>
+
+  <body>
+    <div id="nav2">
+      
+      <a href="index.html">
+      	<img src="images/return.png" class="return">首页
+      </a>
+    </div>
+
+    <div id="content">
+
+    <div id="background">
+      <img src="images/bgimg.jpg" id="bgImg2">
+    </div>
+
+
+    <div id="formbg">
+      <div id="welcome">
+        Welcome to NJUPT Astronomy Amature Association!
+      </div>
+      <div id="form">
+      <form id="form" onsubmit="return validate();">
+        <label for="usrname" placeholder="请输入姓名">姓名:</label>
+        <input type="text" id="usrname" required/>
+        <br/>
+            <br/>
+            <label>性别：</label>
+            <input type="radio" name="rb" required checked="checked">男</input>
+            <input type="radio" name="rb" required>女</input>
+            <br/>
+            <br/>
+            <label for="birthday">生日:</label>
+            <input type="date" id="birthday" placeholder="请选择生日"/>
+            <br/>
+            <br/>
+            <label for="QQ">QQ:</label>
+            <input type="text" id="QQ" placeholder="请输入QQ号" />
+            <br/>
+            <br/>
+            <label for="mailbox">邮箱:</label>
+            <input type="text" id="mailbox" placeholder="请输入邮箱"/>
+            <br/>
+            <br/>
+            <label for="tel">电话:</label>
+            <input type="text" id="tel" placeholder="请输入电话号码"/>
+            <br/>
+            <br/>
+            <label for="department">学院:</label>
+            <select id="department">
+            <option value="0">管理学院</option>
+            <option value="1">通信与信息工程学院</option>
+            <option value="2">电子科学与工程学院</option>
+            <option value="3">光电工程学院</option>
+            <option value="4">计算机学院、软件学院、网络空间安全学院</option>
+            <option value="5">自动化学院</option>
+            <option value="6">材料科学与工程学院</option>
+            <option value="7">物联网学院</option>
+            <option value="8">地理与生物信息学院</option>
+            <option value="9">传媒与艺术学院</option>
+            <option value="10">经济学院</option>
+            <option value="11">人文与社会科学学院</option>
+            <option value="12">外国语学院</option>
+            <option value="13">教育科学与技术学院</option>
+            <option value="14">贝尔英才学院</option>
+            </select>
+            <br/>
+            <br/>
+            <label for="major">专业:</label>
+            <input type="text" id="major" placeholder="请输入专业名称"/>
+            <br/>
+            <br/>
+            <label for="AAAdepartment1">第一志愿:</label>
+            <select id="AAAdepartment1">
+            <option value="0">学术部</option>
+            <option value="1">观测部</option>
+            <option value="2">宣传部</option>
+            <option value="3">外联部</option>
+      </select>
+            <br/>
+            <br/>
+            <label for="AAAdepartment2">第二志愿:</label>
+            <select id="AAAdepartment2">
+              <option value="0">学术部</option>
+              <option value="1">观测部</option>
+              <option value="2">宣传部</option>
+              <option value="3">外联部</option>
+            </select>
+            <br/>
+            <br/>
+            <input type="submit" id="submit" onclick="confirminfo()" />
+            <input type="reset" id="reset"/>
+             </div>
+        </div>
+      </div>
+     
+
+     
+      <script>
+          function confirminfo()
+          {
+                  var msg=window.confirm('Do you want to submit it?');
+                  if(msg==false)
+                  {
+                    alert("Your submit has been canceled.")
+                    window.event.preventDefault();
+                  }
+                  else{
+                    alert("欢迎加入天协！请加入我们的新生群并等待短信通知！")
+                  }
+                
+          }
+      </script>
+    </form>
+  </body>
+</html>

@@ -1,3 +1,36 @@
+﻿/* 导航栏 */
+#nav{
+	height: 60px;
+	width: 100%;
+	background-color: rgb(0,0,0);
+	z-index: 2;
+	position: fixed;
+}
+.top-left{
+	width: 40%;
+	display: inline-block;
+}
+.top-right{
+	float: right;
+ 	display: inline-block;
+	margin-right: 5%;
+}
+.top-left a:first-child{
+	position: absolute;
+	top: 5px;
+	left: 100px;
+	line-height: 50px;
+	color: #f5f5f5;
+	font-size: 18px;
+	font-family: "微软雅黑";
+}
+#logo{
+	position: absolute;
+	top: 10px;
+	left: 50px;
+	height: 40px;
+	width: 40px;
+}
 /*导航栏反转菜单特效*/
 .top-nav{
 	width: 100%;
@@ -10,7 +43,7 @@
 	margin-right: 10px;
 	list-style: none;
 }
-.top-nav > li p{
+.top-nav > li p,.top-nav>li a{
 	color: white;
 	font-size: 16px;
 	display: inline-block;
@@ -52,4 +85,42 @@
 }
 .top-nav>li .sub li:nth-child(1){
 	transition-delay: 600ms;
+}
+/*底部区域*/
+#footer{
+	height: 50%;
+	width: 100%;
+	text-align: center;
+	background-color: black;
+}
+.QRCode{
+	height: 50%;
+	display: inline-block;
+	margin-left: 2%;
+	text-align: center;
+}
+.QRCode img{
+	width: 100px;
+	margin: 10px auto;
+}
+.textjoin{
+	width: 100%;
+	display: block;
+	text-align: center;
+	font: bold 32px "Arial";
+	margin-bottom: 20px;
+}
+.copyright{
+	text-align: center;
+	margin-bottom: 20px;
+}
+.blocka{
+	height: 20px;
+	width: 100%;
+	background-color: #f5f5f5;
+}
+.blockb{
+	height: 20px;
+	width: 100%;
+	background-color: black;
 }
